@@ -7,9 +7,8 @@ def create_app(test_config=None):
     app.config.from_mapping(
         SECRET_KEY='dev', # para ter dados seguros (deve-se mudar o "dev" posteriormente)
 
-        # 04/05 - mudamos 'flaskr.sqlite' para 'codigos.sqlite'
         # caminho onde o arquivo de banco de dados SQLite será salvo
-        DATABASE=os.path.join(app.instance_path, 'codigos.sqlite'),
+        DATABASE=os.path.join(app.instance_path, 'flaskr.sqlite'),
     )
 
     if test_config is None:
@@ -31,5 +30,14 @@ def create_app(test_config=None):
     # abrir url
     @app.route('/hello')
     def hello():
-        return 'Hello, World!'
+        return 'Hello, World! ' * 10
     return app
+
+def create_app():
+	app = ...
+	# existing code omitted
+
+	from . import db
+	db.init_app(app)
+
+	return app
