@@ -30,7 +30,7 @@ def create_app(test_config=None):
     # abrir url
     @app.route('/hello')
     def hello():
-        return 'Hello, World! ' * 10
+        return 'Hello, World! '
     return app
 
 def create_app():
