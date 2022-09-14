@@ -4,7 +4,7 @@ body{
 }
 
 h1{
-    color: #393939;
+    color: #4B0082;
     text-align: center;
 }
 
@@ -98,7 +98,7 @@ nav a{
     margin-top: 200px;
 }
 .link:hover{
-    background-color: #050542;
+    background-color: #393939;
 }
 
 #check:checked ~ .barra nav a .link{
@@ -148,4 +148,27 @@ flex-flow: row wrap;
 
 input {
     outline: none;
+}
+
+#divBusca{
+  background-color:#c0c0c0;
+  border:solid 1px;
+  border-radius:15px;
+  width:250px;
+  text-align: center;
+  float: right;
+
+}
+
+#txtBusca{
+  background-color:transparent;
+  font-size:15px;
+  border:none;
+  height:20px;
+  width:200px;
+}
+
+.perfil_serie{
+    color: white;
+    margin-left: 8%;
 }

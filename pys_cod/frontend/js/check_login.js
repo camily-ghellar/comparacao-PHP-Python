@@ -13,7 +13,7 @@ $(function () {
         
         Menu de opções:
         <a href="principal.html">Início</a> |
-        Incluir |    CARREGAR A PÁGINA INDEX_PRINCIPAL.HTML
+        Incluir |    CARREGAR A PÁGINA INDEX.HTML
         Opções |
         <a href=# id="linkLogout">Logout</a>
                 
