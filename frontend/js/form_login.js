@@ -31,8 +31,8 @@ $(function () { // quando o documento estiver pronto/carregado
         });
         function cadastroOk(retorno) {
             if (retorno.resultado == "ok") { // a operação deu certo?
-                // encaminha para a página de login
-                window.location = 'entrar.html';
+                // encaminha para a página inicial
+                window.location = 'index.html';
             } else {
                 // informar mensagem de erro
                 alert("ERRO: " + retorno.resultado + ":" + retorno.detalhes);

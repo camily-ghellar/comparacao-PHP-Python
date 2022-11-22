@@ -28,7 +28,7 @@ $(function () {
         // remove item da sessao
         sessionStorage.removeItem('login');
         // atualiza a tela
-        window.location = 'principal.html';
+        window.location = 'entrar.html';
     });
 
 });

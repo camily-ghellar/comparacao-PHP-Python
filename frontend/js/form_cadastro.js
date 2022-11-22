@@ -9,6 +9,8 @@ $(function () { // quando o documento estiver pronto/carregado
         email = $("#email").val();
         senha = $("#senha").val();
 
+        var senha = md5(senha);
+
         // preparar dados no formato json
         var dados = JSON.stringify({ nome:nome, email:email, senha:senha });
 

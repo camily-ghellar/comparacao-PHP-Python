@@ -5,8 +5,7 @@ from modelo.usuario import Usuario
 def run():
     print("TESTE DE USUÁRIO")
     
-    p1 = Usuario(nome = "Alice", email = "alice@gmail.com", senha = "123")
-    p2 = Usuario(nome = "Camily", email = "camily@gmail.com", senha = "456")
+    teste_usuario = Usuario(nome = "Uriarte", email = "uriarte@gmail.com", senha = "uriarte123")
 
     db.session.add(p1)
     db.session.add(p2)
