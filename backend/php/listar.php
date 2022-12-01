@@ -46,7 +46,9 @@ https://cursos.alura.com.br/forum/topico-php-startup-unable-to-load-dynamic-libr
     if ($classe == "Pessoa") 
         $sql = "SELECT * FROM usuario";
     else 
-        echo '{"resultado":"erro", "detalhes":"classe não encontrada: '+$classe+'"}';
+        $mensagem = "classe não encontrada: " . $classe . ";
+        $resposta = array ('resultado' => 'erro', 'detalhes' => $mensagem);
+        echo json_encode($resposta);
 
     // fazer a consulta SQL
     $result = $myPDO->query($sql);
@@ -55,7 +57,7 @@ https://cursos.alura.com.br/forum/topico-php-startup-unable-to-load-dynamic-libr
     foreach($result as $row)
     {
         // obtém array de pessoa
-        $pessoa = array("id"=>$row['id'],
+        $pessoa = array('id"=>$row['id'],
                         "nome"=>$row['nome'],
                         "email"=>$row['email'],
                         "senha"=>$row['senha']);
