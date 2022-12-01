@@ -23,7 +23,9 @@ arquivobd = os.path.join(path, 'usuario.db')
 
 # sqlalchemy
 #app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///"+arquivobd
-app.config['SQLALCHEMY_DATABASE_URI'] = "mysql+pymysql://root:@localhost/cadastro_pys"
+#app.config['SQLALCHEMY_DATABASE_URI'] = "mysql+pymysql://root:@localhost/cadastro_pys"
+app.config['SQLALCHEMY_DATABASE_URI'] = "mysql+pymysql://root:root@localhost/cadastro_pys" #usado na escola
+
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False  # remover warnings
 db = SQLAlchemy(app)
 
