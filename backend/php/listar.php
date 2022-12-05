@@ -33,22 +33,34 @@ https://cursos.alura.com.br/forum/topico-php-startup-unable-to-load-dynamic-libr
     //print($uri);
 
     // divide por barra
-    $partes = explode("/", $uri); // exemplo: /listar/Pessoa
+    //$partes = explode("/", $uri); // exemplo: /listar.php/Pessoa
     //print("\n");
-    //print($partes);
-
+   // print("\nuri: ");
+    //print($uri);
+    
     // pega a parte 1
-    $classe = $partes[2];
+    $classe = substr($uri, 1);
+    //print("\nCLASSE=>");
+   // print($classe);
 
     //print("\n");
     //print($classe);
 
-    if ($classe == "Pessoa") 
+    if ($classe == "Usuario") {
+        //print("ENTREI!!");
         $sql = "SELECT * FROM usuario";
+    }
     else 
-        $mensagem = "classe não encontrada: " . $classe . ";
+    {
+        //print("nao deu");
+        $mensagem = "classe não encontrada: ";
         $resposta = array ('resultado' => 'erro', 'detalhes' => $mensagem);
         echo json_encode($resposta);
+        exit();
+    }
+
+   // print("\nSQL\n");
+    //print($sql);
 
     // fazer a consulta SQL
     $result = $myPDO->query($sql);
@@ -57,7 +69,7 @@ https://cursos.alura.com.br/forum/topico-php-startup-unable-to-load-dynamic-libr
     foreach($result as $row)
     {
         // obtém array de pessoa
-        $pessoa = array('id"=>$row['id'],
+        $pessoa = array("id"=>$row['id'],
                         "nome"=>$row['nome'],
                         "email"=>$row['email'],
                         "senha"=>$row['senha']);
