@@ -1,0 +1,164 @@
+C:\Users\Acer>ab -n 1000 -c 10 http://localhost/pys_dp/backend/php/listar.php/Usuario
+This is ApacheBench, Version 2.3 <$Revision: 1901567 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking localhost (be patient)
+Completed 100 requests
+Completed 200 requests
+Completed 300 requests
+Completed 400 requests
+Completed 500 requests
+Completed 600 requests
+Completed 700 requests
+Completed 800 requests
+Completed 900 requests
+Completed 1000 requests
+Finished 1000 requests
+
+
+Server Software:        Apache/2.4.51
+Server Hostname:        localhost
+Server Port:            80
+
+Document Path:          /pys_dp/backend/php/listar.php/Usuario
+Document Length:        416 bytes
+
+Concurrency Level:      10
+Time taken for tests:   0.448 seconds
+Complete requests:      1000
+Failed requests:        0
+Total transferred:      635000 bytes
+HTML transferred:       416000 bytes
+Requests per second:    2230.80 [#/sec] (mean)
+Time per request:       4.483 [ms] (mean)
+Time per request:       0.448 [ms] (mean, across all concurrent requests)
+Transfer rate:          1383.36 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    0   1.0      0       8
+Processing:     0    4   4.4      1      26
+Waiting:        0    4   4.4      1      25
+Total:          0    4   4.4      8      26
+
+Percentage of the requests served within a certain time (ms)
+  50%      8
+  66%      8
+  75%      8
+  80%      8
+  90%      9
+  95%      9
+  98%      9
+  99%     17
+ 100%     26 (longest request)
+
+C:\Users\Acer>ab -n 1000 -c 10 http://localhost/pys_dp/backend/php/listar.php/Usuario
+This is ApacheBench, Version 2.3 <$Revision: 1901567 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking localhost (be patient)
+Completed 100 requests
+Completed 200 requests
+Completed 300 requests
+Completed 400 requests
+Completed 500 requests
+Completed 600 requests
+Completed 700 requests
+Completed 800 requests
+Completed 900 requests
+Completed 1000 requests
+Finished 1000 requests
+
+
+Server Software:        Apache/2.4.51
+Server Hostname:        localhost
+Server Port:            80
+
+Document Path:          /pys_dp/backend/php/listar.php/Usuario
+Document Length:        416 bytes
+
+Concurrency Level:      10
+Time taken for tests:   0.475 seconds
+Complete requests:      1000
+Failed requests:        0
+Total transferred:      635000 bytes
+HTML transferred:       416000 bytes
+Requests per second:    2105.80 [#/sec] (mean)
+Time per request:       4.749 [ms] (mean)
+Time per request:       0.475 [ms] (mean, across all concurrent requests)
+Transfer rate:          1305.85 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    0   0.9      0       8
+Processing:     0    5   4.9      6      25
+Waiting:        0    5   4.9      6      25
+Total:          0    5   4.9      7      25
+
+Percentage of the requests served within a certain time (ms)
+  50%      7
+  66%      8
+  75%      8
+  80%      8
+  90%      9
+  95%     10
+  98%     17
+  99%     25
+ 100%     25 (longest request)
+
+C:\Users\Acer>ab -n 1000 -c 10 http://localhost/pys_dp/backend/php/listar.php/Usuario
+This is ApacheBench, Version 2.3 <$Revision: 1901567 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking localhost (be patient)
+Completed 100 requests
+Completed 200 requests
+Completed 300 requests
+Completed 400 requests
+Completed 500 requests
+Completed 600 requests
+Completed 700 requests
+Completed 800 requests
+Completed 900 requests
+Completed 1000 requests
+Finished 1000 requests
+
+
+Server Software:        Apache/2.4.51
+Server Hostname:        localhost
+Server Port:            80
+
+Document Path:          /pys_dp/backend/php/listar.php/Usuario
+Document Length:        416 bytes
+
+Concurrency Level:      10
+Time taken for tests:   0.473 seconds
+Complete requests:      1000
+Failed requests:        0
+Total transferred:      635000 bytes
+HTML transferred:       416000 bytes
+Requests per second:    2115.62 [#/sec] (mean)
+Time per request:       4.727 [ms] (mean)
+Time per request:       0.473 [ms] (mean, across all concurrent requests)
+Transfer rate:          1311.93 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    0   1.2      0       8
+Processing:     0    4   4.5      3      26
+Waiting:        0    4   4.5      1      26
+Total:          0    4   4.5      8      26
+
+Percentage of the requests served within a certain time (ms)
+  50%      8
+  66%      8
+  75%      8
+  80%      8
+  90%      8
+  95%      9
+  98%     11
+  99%     21
+ 100%     26 (longest request)
