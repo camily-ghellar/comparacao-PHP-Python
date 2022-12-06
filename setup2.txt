@@ -1,0 +1,338 @@
+d06-pc04
+    descrição: Computer
+    largura: 64 bits
+    capacidades: smp vsyscall32
+  *-core
+       descrição: Motherboard
+       ID físico: 0
+     *-memory
+          descrição: Memória do sistema
+          ID físico: 0
+          tamanho: 6GiB
+     *-cpu
+          produto: AMD Phenom(tm) II X4 B95 Processor
+          fabricante: Advanced Micro Devices [AMD]
+          ID físico: 1
+          informações do barramento: cpu@0
+          tamanho: 800MHz
+          capacidade: 3GHz
+          largura: 64 bits
+          capacidades: fpu fpu_exception wp vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall mmxext fxsr_opt pdpe1gb rdtscp x86-64 3dnowext 3dnow constant_tsc rep_good nopl nonstop_tsc cpuid extd_apicid pni monitor cx16 popcnt lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt hw_pstate vmmcall npt lbrv svm_lock nrip_save cpufreq
+     *-pci:0
+          descrição: Host bridge
+          produto: RS880 Host Bridge
+          fabricante: Advanced Micro Devices, Inc. [AMD]
+          ID físico: 100
+          informações do barramento: pci@0000:00:00.0
+          versão: 00
+          largura: 32 bits
+          clock: 66MHz
+          configuração: latency=32
+        *-pci:0
+             descrição: PCI bridge
+             produto: RS780 PCI to PCI bridge (ext gfx port 0)
+             fabricante: Advanced Micro Devices, Inc. [AMD]
+             ID físico: 2
+             informações do barramento: pci@0000:00:02.0
+             versão: 00
+             largura: 32 bits
+             clock: 33MHz
+             capacidades: pci normal_decode bus_master cap_list
+             configuração: driver=pcieport
+             recursos: irq:24 porta de E/S:2000(tamanho=4096) memória:f0000000-f00fffff porta de E/S:e0000000(tamanho=268435456)
+           *-display
+                descrição: VGA compatible controller
+                produto: Cedar [Radeon HD 5000/6000/7350/8350 Series]
+                fabricante: Advanced Micro Devices, Inc. [AMD/ATI]
+                ID físico: 0
+                informações do barramento: pci@0000:02:00.0
+                versão: 00
+                largura: 64 bits
+                clock: 33MHz
+                capacidades: vga_controller bus_master cap_list rom
+                configuração: driver=radeon latency=0
+                recursos: irq:26 memória:e0000000-efffffff memória:f0000000-f001ffff porta de E/S:2100(tamanho=256) memória:c0000-dffff
+        *-pci:1
+             descrição: PCI bridge
+             produto: RS780/RS880 PCI to PCI bridge (PCIE port 5)
+             fabricante: Advanced Micro Devices, Inc. [AMD]
+             ID físico: a
+             informações do barramento: pci@0000:00:0a.0
+             versão: 00
+             largura: 32 bits
+             clock: 33MHz
+             capacidades: pci normal_decode bus_master cap_list
+             configuração: driver=pcieport
+             recursos: irq:25 memória:f0100000-f01fffff
+           *-network
+                descrição: Ethernet interface
+                produto: NetXtreme BCM5761 Gigabit Ethernet PCIe
+                fabricante: Broadcom Inc. and subsidiaries
+                ID físico: 0
+                informações do barramento: pci@0000:3f:00.0
+                nome lógico: enp63s0
+                versão: 10
+                serial: 2c:27:d7:a1:bf:21
+                tamanho: 1Gbit/s
+                capacidade: 1Gbit/s
+                largura: 64 bits
+                clock: 33MHz
+                capacidades: bus_master cap_list ethernet physical tp 10bt 10bt-fd 100bt 100bt-fd 1000bt 1000bt-fd autonegotiation
+                configuração: autonegotiation=on broadcast=yes driver=tg3 driverversion=5.15.0-53-generic duplex=full firmware=5761-v3.77 ip=191.52.7.72 latency=0 link=yes multicast=yes port=twisted pair speed=1Gbit/s
+                recursos: irq:27 memória:f0100000-f010ffff memória:f0110000-f011ffff
+        *-sata
+             descrição: SATA controller
+             produto: SB7x0/SB8x0/SB9x0 SATA Controller [AHCI mode]
+             fabricante: Advanced Micro Devices, Inc. [AMD/ATI]
+             ID físico: 11
+             informações do barramento: pci@0000:00:11.0
+             versão: 00
+             largura: 32 bits
+             clock: 66MHz
+             capacidades: sata ahci_1.0 bus_master cap_list
+             configuração: driver=ahci latency=32
+             recursos: irq:22 porta de E/S:3110(tamanho=8) porta de E/S:3120(tamanho=4) porta de E/S:3118(tamanho=8) porta de E/S:3124(tamanho=4) porta de E/S:3100(tamanho=16) memória:f0209000-f02093ff
+        *-usb:0
+             descrição: USB controller
+             produto: SB7x0/SB8x0/SB9x0 USB OHCI0 Controller
+             fabricante: Advanced Micro Devices, Inc. [AMD/ATI]
+             ID físico: 12
+             informações do barramento: pci@0000:00:12.0
+             versão: 00
+             largura: 32 bits
+             clock: 66MHz
+             capacidades: ohci bus_master
+             configuração: driver=ohci-pci latency=32
+             recursos: irq:16 memória:f0204000-f0204fff
+        *-usb:1
+             descrição: USB controller
+             produto: SB7x0 USB OHCI1 Controller
+             fabricante: Advanced Micro Devices, Inc. [AMD/ATI]
+             ID físico: 12.1
+             informações do barramento: pci@0000:00:12.1
+             versão: 00
+             largura: 32 bits
+             clock: 66MHz
+             capacidades: ohci bus_master
+             configuração: driver=ohci-pci latency=32
+             recursos: irq:16 memória:f0205000-f0205fff
+        *-usb:2
+             descrição: USB controller
+             produto: SB7x0/SB8x0/SB9x0 USB EHCI Controller
+             fabricante: Advanced Micro Devices, Inc. [AMD/ATI]
+             ID físico: 12.2
+             informações do barramento: pci@0000:00:12.2
+             versão: 00
+             largura: 32 bits
+             clock: 66MHz
+             capacidades: ehci bus_master cap_list
+             configuração: driver=ehci-pci latency=32
+             recursos: irq:17 memória:f0209400-f02094ff
+        *-usb:3
+             descrição: USB controller
+             produto: SB7x0/SB8x0/SB9x0 USB OHCI0 Controller
+             fabricante: Advanced Micro Devices, Inc. [AMD/ATI]
+             ID físico: 13
+             informações do barramento: pci@0000:00:13.0
+             versão: 00
+             largura: 32 bits
+             clock: 66MHz
+             capacidades: ohci bus_master
+             configuração: driver=ohci-pci latency=32
+             recursos: irq:18 memória:f0206000-f0206fff
+        *-usb:4
+             descrição: USB controller
+             produto: SB7x0 USB OHCI1 Controller
+             fabricante: Advanced Micro Devices, Inc. [AMD/ATI]
+             ID físico: 13.1
+             informações do barramento: pci@0000:00:13.1
+             versão: 00
+             largura: 32 bits
+             clock: 66MHz
+             capacidades: ohci bus_master
+             configuração: driver=ohci-pci latency=32
+             recursos: irq:18 memória:f0207000-f0207fff
+        *-usb:5
+             descrição: USB controller
+             produto: SB7x0/SB8x0/SB9x0 USB EHCI Controller
+             fabricante: Advanced Micro Devices, Inc. [AMD/ATI]
+             ID físico: 13.2
+             informações do barramento: pci@0000:00:13.2
+             versão: 00
+             largura: 32 bits
+             clock: 66MHz
+             capacidades: ehci bus_master cap_list
+             configuração: driver=ehci-pci latency=32
+             recursos: irq:19 memória:f0209500-f02095ff
+        *-serial
+             descrição: SMBus
+             produto: SBx00 SMBus Controller
+             fabricante: Advanced Micro Devices, Inc. [AMD/ATI]
+             ID físico: 14
+             informações do barramento: pci@0000:00:14.0
+             versão: 3c
+             largura: 32 bits
+             clock: 66MHz
+             capacidades: cap_list
+             configuração: driver=piix4_smbus latency=0
+             recursos: irq:0
+        *-multimedia
+             descrição: Audio device
+             produto: SBx00 Azalia (Intel HDA)
+             fabricante: Advanced Micro Devices, Inc. [AMD/ATI]
+             ID físico: 14.2
+             informações do barramento: pci@0000:00:14.2
+             versão: 00
+             largura: 64 bits
+             clock: 33MHz
+             capacidades: bus_master cap_list
+             configuração: driver=snd_hda_intel latency=32
+             recursos: irq:16 memória:f0200000-f0203fff
+        *-isa
+             descrição: ISA bridge
+             produto: SB7x0/SB8x0/SB9x0 LPC host controller
+             fabricante: Advanced Micro Devices, Inc. [AMD/ATI]
+             ID físico: 14.3
+             informações do barramento: pci@0000:00:14.3
+             versão: 00
+             largura: 32 bits
+             clock: 66MHz
+             capacidades: isa bus_master
+             configuração: latency=0
+        *-pci:2
+             descrição: PCI bridge
+             produto: SBx00 PCI to PCI Bridge
+             fabricante: Advanced Micro Devices, Inc. [AMD/ATI]
+             ID físico: 14.4
+             informações do barramento: pci@0000:00:14.4
+             versão: 00
+             largura: 32 bits
+             clock: 66MHz
+             capacidades: pci subtractive_decode bus_master vga_palette
+             recursos: porta de E/S:1000(tamanho=4096) memória:f0300000-f03fffff
+           *-network DESABILITADO
+                descrição: Interface sem fio
+                produto: RTL-8185 IEEE 802.11a/b/g Wireless LAN Controller
+                fabricante: Realtek Semiconductor Co., Ltd.
+                ID físico: 0
+                informações do barramento: pci@0000:0f:00.0
+                nome lógico: wls4
+                versão: 20
+                serial: 00:1a:3f:53:21:65
+                largura: 32 bits
+                clock: 33MHz
+                capacidades: bus_master cap_list ethernet physical wireless
+                configuração: broadcast=yes driver=rtl818x_pci driverversion=5.15.0-53-generic firmware=N/A latency=32 link=no maxlatency=64 mingnt=32 multicast=yes wireless=IEEE 802.11
+                recursos: irq:20 porta de E/S:1100(tamanho=256) memória:f0300000-f03001ff
+        *-usb:6
+             descrição: USB controller
+             produto: SB7x0/SB8x0/SB9x0 USB OHCI2 Controller
+             fabricante: Advanced Micro Devices, Inc. [AMD/ATI]
+             ID físico: 14.5
+             informações do barramento: pci@0000:00:14.5
+             versão: 00
+             largura: 32 bits
+             clock: 66MHz
+             capacidades: ohci bus_master
+             configuração: driver=ohci-pci latency=32
+             recursos: irq:18 memória:f0208000-f0208fff
+     *-pci:1
+          descrição: Host bridge
+          produto: Family 10h Processor HyperTransport Configuration
+          fabricante: Advanced Micro Devices, Inc. [AMD]
+          ID físico: 101
+          informações do barramento: pci@0000:00:18.0
+          versão: 00
+          largura: 32 bits
+          clock: 33MHz
+     *-pci:2
+          descrição: Host bridge
+          produto: Family 10h Processor Address Map
+          fabricante: Advanced Micro Devices, Inc. [AMD]
+          ID físico: 102
+          informações do barramento: pci@0000:00:18.1
+          versão: 00
+          largura: 32 bits
+          clock: 33MHz
+     *-pci:3
+          descrição: Host bridge
+          produto: Family 10h Processor DRAM Controller
+          fabricante: Advanced Micro Devices, Inc. [AMD]
+          ID físico: 103
+          informações do barramento: pci@0000:00:18.2
+          versão: 00
+          largura: 32 bits
+          clock: 33MHz
+     *-pci:4
+          descrição: Host bridge
+          produto: Family 10h Processor Miscellaneous Control
+          fabricante: Advanced Micro Devices, Inc. [AMD]
+          ID físico: 104
+          informações do barramento: pci@0000:00:18.3
+          versão: 00
+          largura: 32 bits
+          clock: 33MHz
+          configuração: driver=k10temp
+          recursos: irq:0
+     *-pci:5
+          descrição: Host bridge
+          produto: Family 10h Processor Link Control
+          fabricante: Advanced Micro Devices, Inc. [AMD]
+          ID físico: 105
+          informações do barramento: pci@0000:00:18.4
+          versão: 00
+          largura: 32 bits
+          clock: 33MHz
+     *-pnp00:00
+          produto: PnP device PNP0b00
+          ID físico: 2
+          capacidades: pnp
+          configuração: driver=rtc_cmos
+     *-pnp00:01
+          produto: PnP device PNP0f13
+          ID físico: 3
+          capacidades: pnp
+          configuração: driver=i8042 aux
+     *-pnp00:02
+          produto: PnP device PNP0303
+          ID físico: 4
+          capacidades: pnp
+          configuração: driver=i8042 kbd
+     *-pnp00:03
+          produto: PnP device PNP0401
+          ID físico: 5
+          capacidades: pnp
+          configuração: driver=parport_pc
+     *-pnp00:04
+          produto: PnP device PNP0501
+          ID físico: 6
+          capacidades: pnp
+          configuração: driver=serial
+     *-pnp00:05
+          produto: PnP device IFX0102
+          ID físico: 7
+          capacidades: pnp
+          configuração: driver=tpm_tis
+     *-pnp00:06
+          produto: PnP device PNP0c02
+          ID físico: 8
+          capacidades: pnp
+          configuração: driver=system
+     *-pnp00:07
+          produto: PnP device PNP0c02
+          ID físico: 9
+          capacidades: pnp
+          configuração: driver=system
+     *-pnp00:08
+          produto: PnP device PNP0c01
+          ID físico: a
+          capacidades: pnp
+          configuração: driver=system
+  *-network DESABILITADO
+       descrição: Ethernet interface
+       ID físico: 1
+       nome lógico: virbr0-nic
+       serial: 52:54:00:42:17:a8
+       tamanho: 10Mbit/s
+       capacidades: ethernet physical
+       configuração: autonegotiation=off broadcast=yes driver=tun driverversion=1.6 duplex=full link=no multicast=yes port=twisted pair speed=10Mbit/s

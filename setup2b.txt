@@ -1,0 +1,39 @@
+Caminho do hardware  Dispositivo  Classe         Descrição
+============================================================
+                                  system         Computer
+/0                                bus            Motherboard
+/0/0                              memory         6GiB Memória do sistema
+/0/1                              processor      AMD Phenom(tm) II X4 B95 Processor
+/0/100                            bridge         RS880 Host Bridge
+/0/100/2                          bridge         RS780 PCI to PCI bridge (ext gfx port 0)
+/0/100/2/0                        display        Cedar [Radeon HD 5000/6000/7350/8350 Series]
+/0/100/a                          bridge         RS780/RS880 PCI to PCI bridge (PCIE port 5)
+/0/100/a/0           enp63s0      network        NetXtreme BCM5761 Gigabit Ethernet PCIe
+/0/100/11                         storage        SB7x0/SB8x0/SB9x0 SATA Controller [AHCI mode]
+/0/100/12                         bus            SB7x0/SB8x0/SB9x0 USB OHCI0 Controller
+/0/100/12.1                       bus            SB7x0 USB OHCI1 Controller
+/0/100/12.2                       bus            SB7x0/SB8x0/SB9x0 USB EHCI Controller
+/0/100/13                         bus            SB7x0/SB8x0/SB9x0 USB OHCI0 Controller
+/0/100/13.1                       bus            SB7x0 USB OHCI1 Controller
+/0/100/13.2                       bus            SB7x0/SB8x0/SB9x0 USB EHCI Controller
+/0/100/14                         bus            SBx00 SMBus Controller
+/0/100/14.2                       multimedia     SBx00 Azalia (Intel HDA)
+/0/100/14.3                       bridge         SB7x0/SB8x0/SB9x0 LPC host controller
+/0/100/14.4                       bridge         SBx00 PCI to PCI Bridge
+/0/100/14.4/0        wls4         network        RTL-8185 IEEE 802.11a/b/g Wireless LAN Controller
+/0/100/14.5                       bus            SB7x0/SB8x0/SB9x0 USB OHCI2 Controller
+/0/101                            bridge         Family 10h Processor HyperTransport Configuration
+/0/102                            bridge         Family 10h Processor Address Map
+/0/103                            bridge         Family 10h Processor DRAM Controller
+/0/104                            bridge         Family 10h Processor Miscellaneous Control
+/0/105                            bridge         Family 10h Processor Link Control
+/0/2                              system         PnP device PNP0b00
+/0/3                              input          PnP device PNP0f13
+/0/4                              input          PnP device PNP0303
+/0/5                              printer        PnP device PNP0401
+/0/6                              communication  PnP device PNP0501
+/0/7                              generic        PnP device IFX0102
+/0/8                              system         PnP device PNP0c02
+/0/9                              system         PnP device PNP0c02
+/0/a                              system         PnP device PNP0c01
+/1                   virbr0-nic   network        Ethernet interface
